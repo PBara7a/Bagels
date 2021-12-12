@@ -1,13 +1,13 @@
-"""Bagels, by Paulo Barata
+"""Bagels, by Paulo Barata.
 A deductive logic game where you must guess a number based on clues.
-This is based on Al Sweigart's version on The Big Book of Small Python Projects
+This is based on Al Sweigart's version on The Big Book of Small Python Projects.
 12/2021"""
 
 import random
 
 
 def main():
-    print(f'''Bagels, a deductive logic game. By Paulo Barata
+    print(f'''Bagels, a deductive logic game. By Paulo Barata.
 
 I will think of a {num_digits}-digit number with no repeated digits.
 You try to guess what number it is. The clues are:
@@ -21,7 +21,7 @@ Example: If the secret number was 248 and your guess was 843, the clues would be
     while True:  # Main game loop
         secret_num = get_secret_num()
         print('I have thougth of a number.')
-        print(f'You have {max_guesses} guesses to get it')
+        print(f'You have {max_guesses} guesses to get it.')
 
         num_guesses = 1
         while num_guesses <= max_guesses:
@@ -61,7 +61,7 @@ def get_secret_num():
 def get_clues(guess, secret_num):
     """Returns a string with the pico, fermi, bagels clues for a guess and secret number pair."""
     if guess == secret_num:
-        return 'You guessed it!'
+        return 'Congrats! You guessed it!'
 
     clues = []
 
@@ -91,6 +91,7 @@ def get_max_guesses():
     while not max.isdecimal():
         max = input('How many guesses do you think you need?> ')
     return int(max)
+
 num_digits = get_num_digits()
 max_guesses = get_max_guesses()
 
