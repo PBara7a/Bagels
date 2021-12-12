@@ -1,0 +1,2 @@
+# Bagels
+Deductive logic game.
